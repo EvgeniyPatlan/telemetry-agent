@@ -143,6 +143,8 @@ install_golang() {
       GO_ARCH="amd64"
     elif [ x"$ARCH" = "xaarch64" ]; then
       GO_ARCH="arm64"
+    elif [ x"$ARCH" = "xs390x" ]; then
+      GO_ARCH="s390x"
     fi
     wget https://golang.org/dl/go1.22.5.linux-${GO_ARCH}.tar.gz -O /tmp/golang1.22.5.tar.gz
     tar --transform=s,go,go1.22.5, -zxf /tmp/golang1.22.5.tar.gz

@@ -41,6 +41,8 @@ export PATH="/usr/local/go/bin:$PATH:$GOPATH"
 export GOBINPATH="/usr/local/go/bin"
 %ifarch aarch64
 export GOARCH=arm64
+%elifarch s390x
+export GOARCH=s390x
 %else
 export GOARCH=amd64
 %endif
